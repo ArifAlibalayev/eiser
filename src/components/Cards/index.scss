@@ -1,0 +1,62 @@
+#Cards{
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.cardWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    .card{
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background-color: rgba($color: #d3d3d3, $alpha: 0.8);
+        
+        .cardImg{
+            position: relative;
+            &:hover{
+                .dropdownHover{
+                    opacity: 0.8;
+                    height: 50px;
+                }
+                .cardContent h3{
+                    color: rgb(106, 105, 105) !important;
+                }
+
+            }
+            img{
+                width: 400px;
+                height: 250px;
+            }
+        }
+        .cardContent{
+            color: black;
+            height: 30%;
+            padding: 20px;
+            h3{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.dropdownHover{
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color:black;
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    height: 0;
+    transition: .3s linear;
+    color: white;
+   
+
+}

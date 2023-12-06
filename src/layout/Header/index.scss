@@ -1,0 +1,52 @@
+#Header{
+    
+    .uppperHeader{
+        max-width: 75%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        min-height: 5vh;
+        font-size: 12px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .upperLeft{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            height: 50%;
+            
+        }
+        .upperRight{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+        }
+    }
+    .lowerHeader{
+        max-width: 75%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        .lowerIcon{
+            display: grid;
+            place-items: center;
+        }
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lowerFuncs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
