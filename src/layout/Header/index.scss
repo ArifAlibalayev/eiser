@@ -1,5 +1,6 @@
 #Header{
-    
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     .uppperHeader{
         max-width: 75%;
         margin: auto;
@@ -7,7 +8,6 @@
         justify-content: space-between;
         min-height: 5vh;
         font-size: 12px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         .upperLeft{
             display: flex;
@@ -30,6 +30,8 @@
         margin: auto;
         display: flex;
         justify-content: space-between;
+        
+
         .lowerIcon{
             display: grid;
             place-items: center;

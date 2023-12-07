@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./index.scss"
+import { BasketContext } from '../../Context/BasketProvider'
+import { NavLink } from 'react-router-dom';
 
 
 function Header() {
+    const {basket} = useContext(BasketContext);
+    console.log("arif",basket);
   return (
     <header id='Header'>
         <div className="uppperHeader">
@@ -30,10 +34,11 @@ function Header() {
                 <li>CONTACT</li>
             </ul></nav>
             <div className="lowerFuncs">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-regular fa-heart"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
+            
+            <NavLink to={"/Basket"}><i className="fa-solid fa-cart-shopping"> <sup>{basket.length}</sup> </i></NavLink>
+            <i className="fa-solid fa-user"></i>
+            <i className="fa-regular fa-heart"></i>
             </div>
         </div>
     </header>

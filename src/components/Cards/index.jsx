@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
+import { BasketContext } from "../../Context/BasketProvider";
 
 function Cards() {
   const [api, setApi] = useState([]);
@@ -14,10 +15,7 @@ function Cards() {
     setApi(data);
   }
 
- 
-
-  console.log(api);
-
+  const { AddToBasket } = useContext(BasketContext);
   return (
     <>
       <section id="Cards">
@@ -25,11 +23,14 @@ function Cards() {
           {api.map((x) => (
             <div className="card" key={x.id}>
               <div className="cardImg">
-                <img src={x.image} />
+                <img src={x.image} alt="Product" />
                 <div className="dropdownHover">
-                  <i class="fa-regular fa-eye"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-basket-shopping"></i>
+                  <i className="fa-regular fa-eye"></i>
+                  <i className="fa-regular fa-heart"></i>
+                  <i
+                    className="fa-solid fa-basket-shopping"
+                    onClick={() =>AddToBasket(x)}
+                  ></i>
                 </div>
               </div>
               <div className="cardContent">

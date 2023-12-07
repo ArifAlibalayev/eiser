@@ -4,7 +4,6 @@ import Cards from '../../components/Cards'
 function Mainpage() {
   return (
     <>
-    <Header></Header>
     <Cards></Cards>
     </>
   )
