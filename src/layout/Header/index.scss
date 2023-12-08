@@ -52,3 +52,76 @@
         gap: 20px;
     }
 }
+
+.activeH{
+    color: black;
+}
+
+.pendingH{
+    color: red;
+}
+
+// .fa-heart{
+// }
+
+.closedWishlist{
+    transform: translateX(1000px);
+    position: fixed;
+    transition: 0.3s linear;
+    position: fixed;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    background-color: grey; 
+    z-index: 200;   
+    button{
+        border: none;
+        outline: none;
+        background-color: grey;
+        color: white;
+        font-size: 24px;
+        padding: 10px 20px ;
+    }
+}
+
+.openWishlist{
+    
+    transform: translateX(0px);
+    color: white;
+    h1{
+        text-align: center;
+        letter-spacing: 5px;
+    }
+}
+
+.cardWishlist{
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    letter-spacing: 3px;
+}
+
+
+.fa-magnifying-glass{
+    z-index: 150;
+}
+
+.closedSearch{
+    width: 100px;
+    input{
+        border: none;
+    outline: none;
+    }
+    padding-right:20%;
+    overflow: hidden;
+    position: absolute;
+    transition: .3 linear;
+
+}
+
+.openedSearch{
+    opacity: 0;
+    transition: .3 linear;
+}

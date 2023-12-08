@@ -6,6 +6,7 @@ function BasketPage() {
     const {basket, DeleteItem} = useContext(BasketContext)
   return (
    <>
+   <h1 style={{maxWidth:"1200px", margin:"50px auto",textAlign:"center"}}>Basket </h1>
    <div className="cardWrapper">
           {basket.map((x) => (
             <div className="card" key={x.id}>

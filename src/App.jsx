@@ -10,11 +10,10 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Mainpage />} />
-          <Route path="/Details" element={<Details />} />
+          <Route path="/Details/:id" element={<Details />} />
           <Route path="/Basket" element={<BasketPage />} />
-          <Route path="/Basket/:id" element={<BasketPage />} />
 
-        </Route>
+        </Route>np
       </Routes>
     </>
   );

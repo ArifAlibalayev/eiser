@@ -4,6 +4,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import "./index.css"
 import BasketProvider from './Context/BasketProvider';
+import WishlistProvider from './Context/WishlistProvider';
 
 
 
@@ -12,11 +13,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <BasketProvider>
-        <App />
+        <WishlistProvider>
+          <App />
+        </WishlistProvider>
       </BasketProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
 
 
-  

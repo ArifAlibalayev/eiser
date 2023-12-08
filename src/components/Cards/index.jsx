@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import { BasketContext } from "../../Context/BasketProvider";
+import { NavLink } from "react-router-dom";
+import { WishlistContext } from "../../Context/WishlistProvider";
 
 function Cards() {
   const [api, setApi] = useState([]);
@@ -15,7 +17,8 @@ function Cards() {
     setApi(data);
   }
 
-  const { AddToBasket } = useContext(BasketContext);
+  const { AddToBasket, ActiveBasket } = useContext(BasketContext);
+  const { AddToWishlist } = useContext(WishlistContext)
   return (
     <>
       <section id="Cards">
@@ -25,11 +28,17 @@ function Cards() {
               <div className="cardImg">
                 <img src={x.image} alt="Product" />
                 <div className="dropdownHover">
-                  <i className="fa-regular fa-eye"></i>
-                  <i className="fa-regular fa-heart"></i>
+                  <NavLink  to={`/Details/${x.id}`} className={true ? "active" : "pending"}>
+                    <i className="fa-regular fa-eye" ></i>
+                  </NavLink>
+                  <i className="fa-regular fa-heart" onClick={()=>AddToWishlist(x)}></i>
                   <i
-                    className="fa-solid fa-basket-shopping"
-                    onClick={() =>AddToBasket(x)}
+                    className={
+                      ActiveBasket(x)
+                        ? "fa-solid fa-basket-shopping added"
+                        : "fa-solid fa-basket-shopping notAdded"
+                    }
+                    onClick={() => AddToBasket(x)}
                   ></i>
                 </div>
               </div>
